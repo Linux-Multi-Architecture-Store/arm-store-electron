@@ -15,7 +15,7 @@
     "build:clean": "cross-env BUILD_TARGET=onlyClean node .electron-vue/build.js",
     "build:web": "cross-env BUILD_TARGET=web node .electron-vue/build.js",
     "update:serve": "node server/index.js",
-    "dep:upgrade": "yarn upgrade-interactive --latest",
+    "dep:upgrade": "npm-check -u",
     "postinstall": "electron-builder install-app-deps"
   },
   "build": {
@@ -63,6 +63,7 @@
   },
   "dependencies": {
     "axios": "^0.26.0",
+    "body-parser": "^1.19.2",
     "electron-updater": "^4.6.5",
     "express": "^4.17.3",
     "fs-extra": "^10.0.1"
@@ -122,6 +123,7 @@
     "mini-css-extract-plugin": "2.5.3",
     "multispinner": "^0.2.1",
     "node-loader": "^2.0.0",
+    "npm-check": "^5.9.2",
     "nprogress": "^0.2.0",
     "portfinder": "^1.0.28",
     "postcss": "^8.4.7",
